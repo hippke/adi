@@ -39,7 +39,7 @@ We inject the trial occultar array into the star grid:
 ```python
 def star_with_occult(pixels, l1, l2, occultarray):
     """Fetches limb-darkened star and overplots occulter percentages"""
-    star_grid = numpy.copy(buffered_grid)  # numerical_star(pixels, l1, l2)
+    star_grid = numerical_star(pixels, l1, l2)
     for x_value in range(len(occultarray)):
         height = int(occultarray[x_value])
         # Erase area under curve
