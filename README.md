@@ -35,7 +35,7 @@ def numerical_star(pixels, l1, l2):
     return grid
 ```
 
-We inject the trial occultar array into the star grid:
+We inject the trial occulter array into the star grid:
 ```python
 def star_with_occult(pixels, l1, l2, occultarray):
     """Fetches limb-darkened star and overplots occulter percentages"""
@@ -47,8 +47,33 @@ def star_with_occult(pixels, l1, l2, occultarray):
             star_grid[y_value, x_value] = 0.  # Set opacity [0..1] here
     return star_grid
 ```
+With a simple loop we iterate over the dataset, moving the occulters over time:
+```python
+current_column_occult_ratio = 1 - get_ld_inversion(
+    required_total_flux * correction_factor, l1, l2, ld_steps)
+# Insert best bet ratio in first position of new array
+occultarray[0] = (1 - current_column_occult_ratio) * stellar_radius * 2
 
-And can obtain an image (here with a colormap for illustration purpose only):
+# Produce a grid with the new occultation sitation
+occultedflux = star_with_occult(stellar_radius, l1, l2, occultarray)
+occulted_flux_ratio = numpy.sum(occultedflux) / unocculted_flux
+
+# Roll array to the right
+occultarray = numpy.roll(occultarray, 1)
+```
+
+Of course, the occulting shape will usually be not a rectangle. Depending on morphology, we can step-wise (or for the whole curve) fit the correction factor. Typical empirical values are 0.95 to 1.
+
+A single frame can be generates for visual verification of the transit shape:
+```python
+def save_videoframe(fluxarray, framenumber):
+    fig = plt.figure(frameon=False)
+    ax = plt.Axes(fig, [0., 0., 1., 1.])
+    fig.add_axes(ax)
+    ax.imshow(fluxarray, aspect='auto', cmap=cmap)
+    fig.savefig('fig' + str(framenumber) + '.png', dpi=100)
+```
+And will look like this (here with a colormap for illustration purpose only):
 ![Image](http://www.jaekle.info/c4.png "Img1")
 
 ![Image](http://www.jaekle.info/c1.png "Img1")
