@@ -75,7 +75,7 @@ def save_videoframe(fluxarray, framenumber):
     ax.imshow(fluxarray, aspect='auto', cmap=cmap)
     fig.savefig('fig' + str(framenumber) + '.png', dpi=100)
 ```
-And might look like this (here with a colormap for illustration purpose only). Klick it to see a video!
+And might look like this (here with a colormap for illustration purpose only). [Klick it to see a video!](https://youtu.be/6aC-9ps_fqU)
 [![](http://www.jaekle.info/c4.png)](https://youtu.be/6aC-9ps_fqU)
 
 ## Light curve
