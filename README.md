@@ -49,7 +49,7 @@ def star_with_occult(pixels, l1, l2, occultarray):
 ```
 
 And can obtain an image (here with a colormap for illustration purpose only):
-
+![Image](http://www.jaekle.info/c4.png "Img1")
 
 ![Image](http://www.jaekle.info/c1.png "Img1")
 
