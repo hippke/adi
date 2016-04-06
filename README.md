@@ -77,6 +77,10 @@ def save_videoframe(fluxarray, framenumber):
 ```
 And might look like this (here with a colormap for illustration purpose only). [Klick it to see a video!](https://youtu.be/6aC-9ps_fqU)
 [![](http://www.jaekle.info/c4.png)](https://youtu.be/6aC-9ps_fqU)
+Created with
+```
+ffmpeg -i fig%d.png -aspect 1:1 out.mp4
+```
 
 ## Light curve
 Of course, we might we wondering what the calculated transit light curve looks like. Here is the scatter (again in red) and the best-fit transit shape (black line):
@@ -86,3 +90,6 @@ Of course, we might we wondering what the calculated transit light curve looks l
 And the same with a zoom into the last ~15 days:
 
 ![Image](http://www.jaekle.info/c3.png "Img1")
+
+## Issues
+* Transit/Occultations can only explain flux values below nominal brightness, and no positive flux values (e.g. from reflection)
