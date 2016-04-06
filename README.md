@@ -66,7 +66,7 @@ Of course, the occulting shape will usually be not a rectangle. Depending on mor
 
 
 ## Eyecandy
-A single frame can be generates for visual verification of the transit shape:
+A single frame can be generates for visual verification of the transit shape.
 ```python
 def save_videoframe(fluxarray, framenumber):
     fig = plt.figure(frameon=False)
@@ -75,8 +75,8 @@ def save_videoframe(fluxarray, framenumber):
     ax.imshow(fluxarray, aspect='auto', cmap=cmap)
     fig.savefig('fig' + str(framenumber) + '.png', dpi=100)
 ```
-And might look like this (here with a colormap for illustration purpose only):
-![Image](http://www.jaekle.info/c4.png "Img1")
+And might look like this (here with a colormap for illustration purpose only). Klick on to see a video!
+[![](http://www.jaekle.info/c4.png)](https://youtu.be/6aC-9ps_fqU)
 
 ## Light curve
 Of course, we might we wondering what the calculated transit light curve looks like. Here is the scatter (again in red) and the best-fit transit shape (black line):
@@ -86,6 +86,3 @@ Of course, we might we wondering what the calculated transit light curve looks l
 And again with a zoom into the last ~15 days
 
 ![Image](http://www.jaekle.info/c3.png "Img1")
-
-## Video
-Finally, we can make a video of the whole thing...
