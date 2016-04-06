@@ -84,7 +84,7 @@ ffmpeg -i fig%d.png -aspect 1:1 out.mp4
 ```
 
 ## Light curve
-And here is best-fit transit shape (black line), and the raw scatter for comparison (again in red) and the :
+And here is the best-fit transit shape (black line), and the raw scatter for comparison (again in red) and the :
 
 ![Image](http://www.jaekle.info/c1.png "Img1")
 
