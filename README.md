@@ -66,7 +66,7 @@ Of course, the occulting shape will usually be not a rectangle. Depending on mor
 
 
 ## Eyecandy
-Images and videos can be generates for visual verification of the transit shape.
+Images and videos can be generated for visual verification of the transit shape.
 ```python
 def save_videoframe(fluxarray, framenumber):
     fig = plt.figure(frameon=False)
