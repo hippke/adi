@@ -79,8 +79,13 @@ And might look like this (here with a colormap for illustration purpose only):
 ![Image](http://www.jaekle.info/c4.png "Img1")
 
 ## Light curve
-Of course, we might we wondering what the calculated transit light curve looks like. Here is the scatter (again in red) and the best-fit transit shape (black line)
+Of course, we might we wondering what the calculated transit light curve looks like. Here is the scatter (again in red) and the best-fit transit shape (black line):
+
 ![Image](http://www.jaekle.info/c1.png "Img1")
 
-And again with a zoom into the last ~20 days
+And again with a zoom into the last ~15 days
+
 ![Image](http://www.jaekle.info/c3.png "Img1")
+
+## Video
+Finally, we can make a video of the whole thing...
