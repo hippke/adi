@@ -84,7 +84,7 @@ ffmpeg -i fig%d.png -aspect 1:1 out.mp4
 ```
 
 ## Light curve
-Of course, we might we wondering what the calculated transit light curve looks like. Here is the scatter (again in red) and the best-fit transit shape (black line):
+And here is best-fit transit shape (black line), and the raw scatter for comparison (again in red) and the :
 
 ![Image](http://www.jaekle.info/c1.png "Img1")
 
