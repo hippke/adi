@@ -83,6 +83,6 @@ Of course, we might we wondering what the calculated transit light curve looks l
 
 ![Image](http://www.jaekle.info/c1.png "Img1")
 
-And again with a zoom into the last ~15 days
+And the same with a zoom into the last ~15 days:
 
 ![Image](http://www.jaekle.info/c3.png "Img1")
