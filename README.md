@@ -64,6 +64,8 @@ occultarray = numpy.roll(occultarray, 1)
 
 Of course, the occulting shape will usually be not a rectangle. Depending on morphology, we can step-wise (or for the whole curve) fit the correction factor. Typical empirical values are 0.95 to 1.
 
+
+## Eyecandy
 A single frame can be generates for visual verification of the transit shape:
 ```python
 def save_videoframe(fluxarray, framenumber):
@@ -73,9 +75,12 @@ def save_videoframe(fluxarray, framenumber):
     ax.imshow(fluxarray, aspect='auto', cmap=cmap)
     fig.savefig('fig' + str(framenumber) + '.png', dpi=100)
 ```
-And will look like this (here with a colormap for illustration purpose only):
+And might look like this (here with a colormap for illustration purpose only):
 ![Image](http://www.jaekle.info/c4.png "Img1")
 
+## Light curve
+Of course, we might we wondering what the calculated transit light curve looks like. Here is the scatter (again in red) and the best-fit transit shape (black line)
 ![Image](http://www.jaekle.info/c1.png "Img1")
 
+And again with a zoom into the last ~20 days
 ![Image](http://www.jaekle.info/c3.png "Img1")
