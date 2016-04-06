@@ -1,4 +1,7 @@
 # Accretion Disk Inversion
+
+*If you make use of this code, please cite our paper and the repository*
+
 We are currently preparing a paper which, amongst other things, discusses the objects that cause dips in the light curve of a star with an accretion disk. This repository provides code and instructions to "inverse" the light curve, i.e. estimate the shape of the occulters. The code can read Kepler (e.g. K2-SFF) time-flux data and output fitted/synthetic light curves and videos.
 
 ## Tutorial
