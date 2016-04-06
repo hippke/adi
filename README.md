@@ -10,7 +10,7 @@ spline_time, spline_flux = make_spline_fit(
     time, flux, allowed_errors, upsample_factor)
 ```
 We can plot the resulting scatter data (red symbols) and overlay the spline fit:
-![Image](http://www.jaekle.info/c2.png "Img1")
+![Image](http://www.jaekle.info/c2.png)
 
 ### Inversion
 Given the clean data, we can now perform the inversion. For each data point, we calculate the area required for a trial impact parameter. The limb darkening law is arbitrary; here we use the quadratic law:
