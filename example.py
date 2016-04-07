@@ -9,6 +9,7 @@ from matplotlib.colors import LinearSegmentedColormap
 
 def quadratic_limb_darkening(impact, l1, l2):
     """Quadratic limb darkening. Kopal 1950, Harvard Col. Obs. Circ., 454, 1"""
+    impact = math.cos(1 - impact)
     return 1 - l1 * (1 - impact) - l2 * (1 - impact) ** 2
 
 
