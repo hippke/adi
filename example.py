@@ -86,7 +86,9 @@ l2 = 0.3467  # Quadratic limb darkening, parameter 2
 # Curve morphology: We do not transit over the center of the star
 # Include this value as a free parameter in the fit. Typical values are 0.95--1
 # Can fit out the delta within the flux from deviating from a rectangle
-correction_factor = 0.985
+# correction_factor = 0.95 #0.985
+alpha = 1.  # Relative depths (higher values: Make dips more different)
+beta = 0.22  # Absolute depth (higher values: deeper dips)
 buffered_grid = numerical_star(stellar_radius, l1, l2)  # Optional speed trick
 # Colormap with black background and red-yellow star
 cmap = LinearSegmentedColormap.from_list('mycmap', [(0 / 3.0, 'black'),
@@ -136,7 +138,8 @@ for currentvalue in range(len(spline_flux)):
         required_total_flux = spline_flux[currentvalue - stellar_radius]
 
     current_column_occult_ratio = 1 - get_ld_inversion(
-        required_total_flux * correction_factor, l1, l2, ld_steps)
+        required_total_flux * alpha, l1, l2, ld_steps)
+    current_column_occult_ratio = current_column_occult_ratio * beta
 
     # Make sure the occultation amount is in valid range
     if current_column_occult_ratio < 0:
@@ -185,6 +188,7 @@ plt.ylabel('Relative Flux', fontsize=16, fontweight='bold')
 plt.savefig("fig_inversion_" + filename + ".pdf", bbox_inches='tight')
 plt.show()
 plt.clf()
+
 
 # Make zoom plot into last part of dataset
 plt.scatter(time, flux, color='r', alpha=0.5, s=20)
